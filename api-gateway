@@ -7,14 +7,14 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: api-customer
-          uri: lb://api-customer
+        - id: api-catalog
+          uri: lb://api-catalog
           predicates:
-            - Path=/api/v1/customer/**
-        - id: api-provider
-          uri: lb://api-provider
+            - Path=/api/v1/catalog/**
+        - id: api-movie
+          uri: lb://api-movie
           predicates:
-            - Path=/api/v1/provider/**
+            - Path=/api/v1/movie/**
             
 eureka:
   instance:
